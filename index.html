@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Flexbox Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MySite</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+            <button class="menu-btn" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Grid Content -->
+    <main class="main-content">
+        <section id="home" class="hero">
+            <h1>Responsive Design</h1>
+            <p>Resize the browser to see layout changes</p>
+        </section>
+        
+        <section id="about" class="features">
+            <div class="feature">
+                <h3>Flexbox</h3>
+                <p>Used in the navigation bar</p>
+            </div>
+            <div class="feature">
+                <h3>CSS Grid</h3>
+                <p>Used in this features section</p>
+            </div>
+            <div class="feature">
+                <h3>Media Queries</h3>
+                <p>Make the page responsive</p>
+            </div>
+        </section>
+
+        <section id="services" class="content-section">
+            <div class="content-main">
+                <h2>Main Content</h2>
+                <p>This section demonstrates responsive layout techniques.</p>
+            </div>
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <p>Additional content area</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Christopher Simango</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('active');
+            this.setAttribute('aria-expanded', nav.classList.contains('active'));
+        });
+    </script>
+</body>
+</html>
